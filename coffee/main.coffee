@@ -1,20 +1,17 @@
 $ () ->
 
   celestrium.init
-    "DependencyProvider": {}
-    "KeyListener":
-      document.querySelector "body"
+    "DependencyDataSource": {}
     "GraphModel":
       nodeHash: (node) -> node.text
       linkHash: (link) -> link.source.text + link.target.text
     "GraphView": {
       el: document.querySelector "body"
     }
-    "NodeSelection": {}
     "Sliders":
       el: document.querySelector "#sliders"
     "ForceSliders": {}
-    "LinkDistribution":
+    "LinkDistro":
       "el": document.querySelector "#distro"
 
   , (instances) ->
